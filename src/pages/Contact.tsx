@@ -187,8 +187,8 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className=" pt-10 text-white overflow-hidden">
-      
+    <div className="pt-10 text-white font-open-sans overflow-hidden">
+
       {/* Hero Section */}
       <section className="py-20 px-4 md:px-8">
         <motion.div
@@ -198,19 +198,15 @@ const ContactPage: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.div variants={itemVariants as Variants} className="mb-4">
-            <div className="inline-block h-1 w-16 bg-linear-to-r from-blue-500 to-cyan-500 rounded-full" />
-          </motion.div>
-
           <motion.h1
             variants={titleVariants as Variants}
-            className="text-5xl md:text-6xl font-bold mb-6 bg-linear-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent"
+            className="text-5xl md:text-6xl font-bold font-montserrat mb-6 bg-linear-to-r from-white via-gray-300 to-gray-400 bg-clip-text text-transparent"
           >
-            Get In Touch With Zaash
+            Get In Touch
           </motion.h1>
 
           <motion.p variants={itemVariants as Variants} className="text-gray-400 text-lg mb-12">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            Want help or have questions? Our team is here to assist you. Fill out the form below or reach us through our social channels.
           </motion.p>
         </motion.div>
       </section>
@@ -226,7 +222,7 @@ const ContactPage: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold mb-8 text-white">Send Us Message</h2>
+            <h2 className="text-2xl font-bold font-montserrat mb-8 text-white">Send Us Message</h2>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
@@ -315,7 +311,7 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-white mb-1">{method.title}</h3>
+                  <h3 className="text-lg font-semibold font-montserrat text-white mb-1">{method.title}</h3>
                   <p className="text-gray-400 text-sm">{method.description}</p>
                 </div>
               </motion.div>
@@ -335,7 +331,7 @@ const ContactPage: React.FC = () => {
         >
           <motion.h2
             variants={itemVariants as Variants}
-            className="text-4xl font-bold text-center mb-12 bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent"
+            className="text-4xl font-bold font-montserrat text-center mb-12 bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent"
           >
             Join Our Community
           </motion.h2>
@@ -355,7 +351,7 @@ const ContactPage: React.FC = () => {
                   {social.icon}
                 </div>
 
-                <h3 className="text-xl font-bold mb-1">{social.count}</h3>
+                <h3 className="text-xl font-bold font-montserrat mb-1">{social.count}</h3>
                 <p className="text-gray-400 text-sm">{social.name}</p>
                 <p className="text-gray-500 text-xs mt-2">{social.label}</p>
               </motion.div>

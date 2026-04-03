@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
-import { MdPalette, MdAutoAwesome, MdPhotoLibrary } from 'react-icons/md';
+import { MdPalette, MdAutoAwesome, MdMessage } from 'react-icons/md';
 
 interface Tool {
   id: number;
@@ -15,23 +15,23 @@ const Tools: React.FC = () => {
     {
       id: 1,
       icon: <MdPalette className="w-8 h-8" />,
-      title: 'Background Studio',
+      title: 'Canvas Playground',
       description:
-        'Explore animated backgrounds for your projects. Choose from various effects and customize as you like. Export as video, image, or code or share your creations as URLs.',
+        'Drag and drop components to build complex designs with ease. Our system handles all the logic for you.',
     },
     {
       id: 2,
-      icon: <MdAutoAwesome className="w-8 h-8" />,
-      title: 'Shape Magic',
+      icon: <MdMessage className="w-8 h-8" />,
+      title: 'Broadcast Messages',
       description:
-        'Tool for automatically creating inner rounded corners between shapes of different sizes. Export as code or SVG.',
+        'Send broadcast messages to your users with zero fees and complete control over formatting and targeting.',
     },
     {
       id: 3,
-      icon: <MdPhotoLibrary className="w-8 h-8" />,
-      title: 'Texture Lab',
+      icon: <MdAutoAwesome className="w-8 h-8" />,
+      title: 'Automate Processes',
       description:
-        'Apply effects to your images and export the results. Add noise, dithering, halftone, ASCII art, and more. Save your presets for sharing or future use.',
+        'Automate workflows like creating mini apps with a simple login to our cloud system. Everything is secure and seamless.',
     },
   ];
 
@@ -106,7 +106,7 @@ const Tools: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen text-white overflow-hidden">
+    <div className="min-h-screen text-white font-open-sans overflow-hidden">
       {/* Hero Section */}
       <motion.div
         className="pt-20 pb-32 text-center px-4"
@@ -116,7 +116,7 @@ const Tools: React.FC = () => {
       >
         <motion.h1
           variants={titleVariants as Variants}
-          className="text-6xl md:text-7xl font-bold mb-6 bg-linear-to-r from-purple-400 via-pink-400 to-purple-300 bg-clip-text text-transparent"
+          className="text-6xl md:text-7xl font-bold font-montserrat mb-6 bg-linear-to-r from-purple-400 via-pink-400 to-purple-300 bg-clip-text text-transparent"
         >
           Tools
         </motion.h1>
@@ -163,7 +163,7 @@ const Tools: React.FC = () => {
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-purple-200 transition-colors">
+                  <h3 className="text-xl font-semibold font-montserrat mb-3 text-white group-hover:text-purple-200 transition-colors">
                     {tool.title}
                   </h3>
 

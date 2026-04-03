@@ -3,7 +3,6 @@ import Home from "@/pages/Home";
 import CommonLayout from "@/components/layouts/CommonLayout";
 import Tools from "@/pages/Tools";
 import TestimonialsAndFAQ from "@/pages/TestimonialsAndFAQ";
-import ContactPage from "@/pages/Contact";
 import NotFoundPageCompact from "@/components/shared/NotFoundPageCompact";
 
 const Routes = createBrowserRouter([
@@ -24,10 +23,10 @@ const Routes = createBrowserRouter([
                 path: '/testimonials',
                 element: <TestimonialsAndFAQ />,
             },
-            {
-                path: '/contact',
-                element: <ContactPage />,
-            },
+            // {
+            //     path: '/contact',
+            //     element: <ContactPage />,
+            // },
         ],
     },
 ]);

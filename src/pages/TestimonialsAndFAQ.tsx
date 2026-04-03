@@ -75,41 +75,36 @@ const TestimonialsAndFAQ: React.FC = () => {
   const faqItems: FAQItem[] = [
     {
       id: 1,
-      question: 'What is Framer?',
+      question: 'Is my Telegram account secure?',
       answer:
-        'Framer is a powerful tool for creating interactive prototypes and animations. It combines design and code to help you build beautiful, interactive experiences.',
+        'Yes. Dragg stores your Telegram account information securely using end-to-end encryption. All sensitive data is encrypted on your device before being transmitted to our servers.',
     },
     {
       id: 2,
-      question: 'Is it easy to learn?',
+      question: 'Why do I need to log in with my account?',
       answer:
-        'Yes! Framer is designed to be intuitive and beginner-friendly. With our comprehensive documentation and tutorials, you can start creating amazing designs in no time.',
+        'We use your Telegram account to help you create and manage your mini apps. This allows us to integrate seamlessly with the Telegram ecosystem and provide a personalized experience. Your account information is stored securely and used only for managing your mini apps.',
     },
     {
       id: 3,
-      question: 'What is Framer?',
+      question: 'What is Dragg?',
       answer:
-        'Framer is a powerful tool for creating interactive prototypes and animations. It combines design and code to help you build beautiful, interactive experiences.',
+        'Dragg is a powerful platform that helps you create mini apps more efficiently and effectively, without requiring any coding knowledge.',
     },
     {
       id: 4,
       question: 'Do I need to code?',
       answer:
-        'No, you dont need to code to use Framer. However, if you want to leverage advanced features and customization, some basic coding knowledge can be helpful.',
+        'No. You do not need any coding skills to use Dragg. Everything can be done through a simple drag-and-drop interface.',
     },
     {
       id: 5,
-      question: 'Is it easy to learn?',
+      question: 'Is it free?',
       answer:
-        'Yes! Framer is designed to be intuitive and beginner-friendly. With our comprehensive documentation and tutorials, you can start creating amazing designs in no time.',
-    },
-    {
-      id: 6,
-      question: 'Do I need to code?',
-      answer:
-        'No, you dont need to code to use Framer. However, if you want to leverage advanced features and customization, some basic coding knowledge can be helpful.',
-    },
+        'Dragg offers both free and paid features. Some tools are available at no cost, while others require payment. You can visit our pricing page for more details or contact us on Telegram.',
+    }
   ];
+
 
   // Animation variants
   const containerVariants = {
@@ -192,7 +187,7 @@ const TestimonialsAndFAQ: React.FC = () => {
   };
 
   return (
-    <div className="text-white overflow-hidden pt-10">
+    <div className="text-white font-open-sans overflow-hidden pt-10">
       {/* Testimonials Section */}
       <section className="py-20 px-4 md:px-8">
         <motion.div
@@ -212,7 +207,7 @@ const TestimonialsAndFAQ: React.FC = () => {
 
             <motion.h2
               variants={titleVariants as Variants}
-              className="text-5xl md:text-6xl font-bold mb-4 bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent"
+              className="text-5xl md:text-6xl font-bold font-montserrat mb-4 bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent"
             >
               What Our Customers Say
             </motion.h2>
@@ -249,7 +244,7 @@ const TestimonialsAndFAQ: React.FC = () => {
                       {testimonial.avatar}
                     </div>
                     <div>
-                      <p className="font-semibold text-white text-sm">{testimonial.author}</p>
+                      <p className="font-semibold font-montserrat text-white text-sm">{testimonial.author}</p>
                       <p className="text-gray-500 text-xs">{testimonial.role}</p>
                     </div>
                   </div>
@@ -278,7 +273,7 @@ const TestimonialsAndFAQ: React.FC = () => {
                 </span>
               </div>
 
-              <h2 className="text-5xl font-bold mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-5xl font-bold font-montserrat mb-4">Frequently Asked Questions</h2>
 
               <p className="text-gray-400 mb-8">
                 If you have any other questions, please email us.
@@ -357,13 +352,12 @@ const TestimonialsAndFAQ: React.FC = () => {
             <div className="absolute bottom-0 right-0 w-40 h-40 bg-purple-600/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
             <motion.div variants={itemVariants as Variants} className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Build and Ship Your Website Faster
+              <h2 className="text-4xl md:text-5xl font-bold font-montserrat mb-4">
+                Build and Ship Your Mini-App Faster
               </h2>
 
               <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
-                Speed up your website build with our ultimate UI kits for Framer. Enjoy
-                high-quality, customizable elements for a seamless, stunning user experience.
+                Create and launch your mini-apps quickly with our intuitive platform. Enjoy a seamless experience from design to deployment.
               </p>
 
               {/* Social Proof */}
@@ -396,7 +390,9 @@ const TestimonialsAndFAQ: React.FC = () => {
                 variants={containerVariants}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <motion.button
+                <motion.a
+                  href='https://app.dragg.app'
+                  target='_blank'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold flex items-center justify-center gap-2 transition-colors group"
@@ -409,15 +405,17 @@ const TestimonialsAndFAQ: React.FC = () => {
                   >
                     <FiArrowRight className="w-5 h-5" />
                   </motion.span>
-                </motion.button>
+                </motion.a>
 
-                <motion.button
+                 <motion.a
+                  href='https://app.dragg.app'
+                  target='_blank'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-3 rounded-lg border border-slate-600 hover:border-slate-500 text-white font-semibold transition-colors"
                 >
                   Learn more
-                </motion.button>
+                </motion.a>
               </motion.div>
             </motion.div>
           </div>

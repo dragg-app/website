@@ -1,13 +1,15 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { HiOutlineHome, HiOutlineWrenchScrewdriver, HiOutlineChatBubbleLeftRight, HiOutlineEnvelope } from "react-icons/hi2";
+import { HiOutlineHome, HiOutlineWrenchScrewdriver, HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { FaTelegramPlane } from "react-icons/fa";
 
 const navItems = [
     { label: 'Home', icon: HiOutlineHome, link: '/' },
     { label: 'Tools', icon: HiOutlineWrenchScrewdriver, link: '/tools' },
     { label: 'Testimonials', icon: HiOutlineChatBubbleLeftRight, link: '/testimonials' },
-    { label: 'Contact', icon: HiOutlineEnvelope, link: '/contact' },
+    { label: 'Telegram', icon: FaTelegramPlane, link: 'https://t.me/dragg_app' },
+    // { label: 'Contact', icon: HiOutlineEnvelope, link: '/contact' },
 ] as const;
 
 const Header: React.FC = () => {
@@ -44,22 +46,13 @@ const Header: React.FC = () => {
                                 key={label}
                                 href={link}
                                 whileHover={{ color: '#e8733a' }}
-                                className="text-[#a0a0a0] text-sm font-medium cursor-pointer no-underline flex items-center gap-1.5"
+                                className="text-[#a0a0a0] text-sm font-medium font-raleway cursor-pointer no-underline flex items-center gap-1.5"
                             >
                                 <Icon className="text-base" />
                                 {label}
                             </motion.a>
                         ))}
                     </div>
-
-                    {/* Logo */}
-                    <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        className="w-10 h-10 bg-linear-to-br from-[#e8733a] to-[#c45e2a] rounded-xl flex items-center justify-center cursor-pointer relative"
-                    >
-                        <span className="text-white font-extrabold text-sm">D</span>
-                        <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3/5 h-0.75 bg-linear-to-r from-transparent via-[#e8733a] to-transparent rounded-full" />
-                    </motion.div>
 
                     {/* Desktop right nav */}
                     <div className="hidden md:flex gap-8 flex-1 justify-end">
@@ -68,7 +61,7 @@ const Header: React.FC = () => {
                                 key={label}
                                 href={link}
                                 whileHover={{ color: '#e8733a' }}
-                                className="text-[#a0a0a0] text-sm font-medium cursor-pointer no-underline flex items-center gap-1.5"
+                                className="text-[#a0a0a0] text-sm font-medium font-raleway cursor-pointer no-underline flex items-center gap-1.5"
                             >
                                 <Icon className="text-base" />
                                 {label}
@@ -133,7 +126,7 @@ const Header: React.FC = () => {
                                         initial={{ opacity: 0, x: 30 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: 0.05 * i, duration: 0.3 }}
-                                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-[#a0a0a0] hover:text-white hover:bg-white/5 text-sm font-medium cursor-pointer no-underline transition-colors"
+                                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-[#a0a0a0] hover:text-white hover:bg-white/5 text-sm font-medium font-raleway cursor-pointer no-underline transition-colors"
                                     >
                                         <Icon className="text-xl text-[#e8733a]" />
                                         {label}

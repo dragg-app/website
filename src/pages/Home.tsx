@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="text-[clamp(48px,10vw,120px)] font-black bg-linear-to-b from-[#e8733a] via-[#f4a261] to-[#e8733a] bg-clip-text text-transparent tracking-tighter mb-5 z-10 leading-none text-center"
+                className="text-[clamp(48px,10vw,120px)] font-black font-montserrat bg-linear-to-b from-[#e8733a] via-[#f4a261] to-[#e8733a] bg-clip-text text-transparent tracking-tighter mb-5 z-10 leading-none text-center"
             >
                 Dragg
             </motion.h1>
@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="text-base text-[#a0a0a0] text-center max-w-md leading-relaxed z-10 px-4"
             >
-                Build Telegram Mini-Apps Without Coding. Component-driven, JSON-powered drag-and-drop builder for the TON ecosystem.
+                Build Telegram Mini-Apps Without Coding. Component-driven, JSON-powered drag-and-drop builder for the ton ecosystem.
             </motion.p>
 
             <motion.div
@@ -43,20 +43,22 @@ const HeroSection: React.FC = () => {
                 className="flex gap-4 mt-8 z-10"
             >
                 <motion.a
-                    href={import.meta.env.VITE_CONTROL_PANEL_URL || "/"}
+                    href={"https://app.dragg.app"}
                     whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(232,115,58,0.4)' }}
                     whileTap={{ scale: 0.97 }}
                     className="px-8 py-3.5 bg-linear-to-r from-[#e8733a] to-[#c45e2a] rounded-full text-white font-semibold text-sm cursor-pointer border-none no-underline"
                 >
                     Start Building →
                 </motion.a>
-                <motion.button
+                <motion.a
+                    href='https://t.me/dragg_app'
+                    target='_blank'
                     whileHover={{ scale: 1.05, borderColor: '#e8733a' }}
                     whileTap={{ scale: 0.97 }}
                     className="px-8 py-3.5 bg-transparent rounded-full text-white font-semibold text-sm cursor-pointer border border-white/10 hover:border-[#e8733a] transition-colors"
                 >
                     Watch Demo
-                </motion.button>
+                </motion.a>
             </motion.div>
         </section>
     );
@@ -139,7 +141,7 @@ const LogoStrip: React.FC = () => {
                     animate={isInView ? { opacity: 0.35, y: 0 } : {}}
                     transition={{ delay: i * 0.1, duration: 0.5 }}
                     whileHover={{ opacity: 0.8 }}
-                    className="text-xl md:text-2xl font-extrabold text-white cursor-default tracking-wide"
+                    className="text-xl md:text-2xl font-extrabold font-montserrat text-white cursor-default tracking-wide"
                 >
                     {logo}
                 </motion.span>
@@ -170,7 +172,7 @@ const StatsSection: React.FC = () => {
                         transition={{ delay: i * 0.12, duration: 0.6 }}
                         className="text-center"
                     >
-                        <h3 className="text-3xl md:text-4xl font-black bg-linear-to-b from-[#e8733a] to-[#f4a261] bg-clip-text text-transparent">
+                        <h3 className="text-3xl md:text-4xl font-black font-montserrat bg-linear-to-b from-[#e8733a] to-[#f4a261] bg-clip-text text-transparent">
                             {stat.value}
                         </h3>
                         <p className="text-xs text-[#666] mt-2">{stat.label}</p>
@@ -192,7 +194,7 @@ const SaveTimeSection: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
-                className="text-3xl md:text-4xl font-extrabold mb-4"
+                className="text-3xl md:text-4xl font-extrabold font-montserrat mb-4"
             >
                 Save time and ship faster
             </motion.h2>
@@ -202,7 +204,7 @@ const SaveTimeSection: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-sm text-[#a0a0a0] leading-relaxed"
             >
-                Elevate your productivity. Build mini-apps effortlessly by assembling components
+                Increase your productivity. Build mini-apps effortlessly by assembling components
                 and deploying to the Telegram ecosystem in seconds.
             </motion.p>
         </section>
@@ -235,7 +237,7 @@ const BentoGrid: React.FC = () => {
                     whileHover={{ scale: 1.01 }}
                     className="md:col-span-3 bg-[#111] rounded-2xl border border-[#1a1a1a] p-7 flex flex-col hover:border-[#e8733a]/30 transition-colors"
                 >
-                    <h3 className="text-lg font-bold mb-2">The Obsidian Canvas</h3>
+                    <h3 className="text-lg font-bold font-montserrat mb-2">The Canvas</h3>
                     <p className="text-xs text-[#666] leading-relaxed max-w-xs">
                         Assemble complex app structures with pixel-perfect accuracy. Our drag-and-drop logic maps directly to clean, production-ready code.
                     </p>
@@ -292,7 +294,7 @@ const BentoGrid: React.FC = () => {
                             <div className="w-5 h-5 rounded bg-linear-to-br from-[#e8733a] to-[#f4a261]" />
                         </div>
                         <div>
-                            <h3 className="text-base font-bold mb-1.5">TON Components</h3>
+                            <h3 className="text-base font-bold font-montserrat mb-1.5">TON Components</h3>
                             <p className="text-[11px] text-[#666] leading-relaxed">
                                 Native UI elements, TON wallet connectors, and Telegram-specific payment hooks ready for use.
                             </p>
@@ -309,9 +311,9 @@ const BentoGrid: React.FC = () => {
                         className="bg-[#111] rounded-2xl border border-[#1a1a1a] p-6 flex flex-col gap-3 hover:border-[#e8733a]/30 transition-colors flex-1"
                     >
                         <div>
-                            <h3 className="text-base font-bold mb-1.5">Bot-First Logic</h3>
+                            <h3 className="text-base font-bold font-montserrat mb-1.5">Bot-First Logic</h3>
                             <p className="text-[11px] text-[#666] leading-relaxed">
-                                Seamlessly link your mini-app with existing Telegram bots for powerful automation workflows.
+                                Seamlessly link your mini-app with existing or new Telegram bots for powerful automation workflows.
                             </p>
                         </div>
                         <div className="flex-1 flex items-center justify-center">
@@ -353,7 +355,7 @@ const BentoGrid: React.FC = () => {
                         ))}
                     </div>
                     <div>
-                        <h3 className="text-lg font-bold mb-2">Instant Production Deploy</h3>
+                        <h3 className="text-lg font-bold font-montserrat mb-2">Instant Production Deploy</h3>
                         <p className="text-xs text-[#666] leading-relaxed max-w-md">
                             Go live globally in seconds. Every edit is synced via a high-performance edge network directly to your users. No server maintenance, no hosting fees.
                         </p>
@@ -383,7 +385,7 @@ const HowItWorks: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-14"
             >
-                <h2 className="text-3xl md:text-4xl font-extrabold mb-4">The Workflow</h2>
+                <h2 className="text-3xl md:text-4xl font-extrabold font-montserrat mb-4">The Workflow</h2>
                 <p className="text-sm text-[#a0a0a0] max-w-md mx-auto">
                     Sophistication simplified. Get started in minutes, not hours.
                 </p>
@@ -398,8 +400,8 @@ const HowItWorks: React.FC = () => {
                         transition={{ delay: 0.2 + i * 0.15, duration: 0.6 }}
                         className="relative"
                     >
-                        <span className="text-5xl font-black text-[#e8733a]">{step.num}</span>
-                        <h3 className="text-lg font-bold mt-2 mb-2">{step.title}</h3>
+                        <span className="text-5xl font-black font-montserrat text-[#e8733a]">{step.num}</span>
+                        <h3 className="text-lg font-bold font-montserrat mt-2 mb-2">{step.title}</h3>
                         <p className="text-xs text-[#666] leading-relaxed">{step.desc}</p>
                         {i < 2 && (
                             <div className="hidden md:block absolute top-8 -right-4 w-8 h-px bg-linear-to-r from-[#e8733a]/40 to-transparent" />
@@ -423,7 +425,7 @@ const CTASection: React.FC = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8 }}
             >
-                <p className="text-2xl md:text-3xl font-bold leading-relaxed mb-10">
+                <p className="text-2xl md:text-3xl font-bold font-montserrat leading-relaxed mb-10">
                     <span className="text-white">
                         Ready to dominate the Telegram ecosystem?{' '}
                     </span>
@@ -434,7 +436,7 @@ const CTASection: React.FC = () => {
                     <span className="text-white">Get started now!</span>
                 </p>
                 <motion.a
-                    href={import.meta.env.VITE_CONTROL_PANEL_URL || "/"}
+                    href={"https://app.dragg.app"}
                     whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(232,115,58,0.4)' }}
                     whileTap={{ scale: 0.97 }}
                     className="px-10 py-4 bg-linear-to-r from-[#e8733a] to-[#c45e2a] rounded-full text-white font-semibold text-base cursor-pointer border-none inline-flex items-center gap-2 no-underline"
@@ -449,7 +451,7 @@ const CTASection: React.FC = () => {
 // ==================== HOME ====================
 const Home: React.FC = () => {
     return (
-        <div className="min-h-screen text-white font-['Inter',sans-serif] overflow-x-hidden">
+        <div className="min-h-screen text-white font-open-sans overflow-x-hidden">
             <HeroSection />
             <DashboardPreview />
             <LogoStrip />

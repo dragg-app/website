@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
                         <div className="w-8 h-8 bg-gradient-to-br from-[#e8733a] to-[#c45e2a] rounded-lg flex items-center justify-center">
                             <span className="text-white font-extrabold text-xs">D</span>
                         </div>
-                        <span className="font-bold text-lg">Dragg</span>
+                        <span className="font-bold font-montserrat text-lg">Dragg</span>
                     </div>
-                    <p className="text-xs text-[#555] leading-relaxed max-w-[200px]">
+                    <p className="text-xs font-open-sans text-[#555] leading-relaxed max-w-[200px]">
                         Build Telegram Mini-Apps without coding. Deploy to the TON ecosystem in seconds.
                     </p>
                 </div>
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                     { title: 'Legal', links: ['Privacy', 'Terms', 'Security', 'Status'] },
                 ].map((col, i) => (
                     <div key={i}>
-                        <h4 className="text-xs font-semibold text-[#888] mb-3 tracking-wider uppercase">
+                        <h4 className="text-xs font-semibold font-montserrat text-[#888] mb-3 tracking-wider uppercase">
                             {col.title}
                         </h4>
                         <div className="flex flex-col gap-2">

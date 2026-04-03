@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
             <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="col-span-2 md:col-span-1">
                     <div className="flex items-center gap-2 mb-4">
-                        <div className="w-8 h-8 bg-gradient-to-br from-[#e8733a] to-[#c45e2a] rounded-lg flex items-center justify-center">
+                        <div className="w-8 h-8 bg-linear-to-br from-[#e8733a] to-[#c45e2a] rounded-lg flex items-center justify-center">
                             <span className="text-white font-extrabold text-xs">D</span>
                         </div>
                         <span className="font-bold font-montserrat text-lg">Dragg</span>

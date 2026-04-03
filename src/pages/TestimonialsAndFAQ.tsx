@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiPlus, FiMinus, FiArrowRight, FiMail } from 'react-icons/fi';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { FiPlus, FiArrowRight, FiMail } from 'react-icons/fi';
 import { AiOutlineStar } from 'react-icons/ai';
 
 interface Testimonial {
@@ -204,20 +204,20 @@ const TestimonialsAndFAQ: React.FC = () => {
         >
           {/* Header */}
           <div className="text-center mb-16">
-            <motion.div variants={itemVariants} className="mb-4">
+            <motion.div variants={itemVariants as Variants} className="mb-4">
               <span className="inline-block px-4 py-1 bg-slate-800/50 border border-purple-500/30 rounded-full text-sm text-gray-400">
                 Testimonials
               </span>
             </motion.div>
 
             <motion.h2
-              variants={titleVariants}
-              className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent"
+              variants={titleVariants as Variants}
+              className="text-5xl md:text-6xl font-bold mb-4 bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent"
             >
               What Our Customers Say
             </motion.h2>
 
-            <motion.p variants={itemVariants} className="text-gray-400 text-lg">
+            <motion.p variants={itemVariants as Variants} className="text-gray-400 text-lg">
               Hear from our incredible customers who are building at lightning speed.
             </motion.p>
           </div>
@@ -225,16 +225,16 @@ const TestimonialsAndFAQ: React.FC = () => {
           {/* Testimonials Grid */}
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            variants={containerVariants}
+            variants={containerVariants as Variants}
           >
             {testimonials.map((testimonial) => (
               <motion.div
                 key={testimonial.id}
-                variants={testimonialCardVariants}
+                variants={testimonialCardVariants as Variants}
                 whileHover="hover"
                 className="group"
               >
-                <div className="h-full p-6 rounded-xl bg-gradient-to-br from-slate-800/40 to-slate-900/40 border border-slate-700/50 hover:border-purple-500/30 transition-colors backdrop-blur-sm">
+                <div className="h-full p-6 rounded-xl bg-linear-to-br from-slate-800/40 to-slate-900/40 border border-slate-700/50 hover:border-purple-500/30 transition-colors backdrop-blur-sm">
                   {/* Rating */}
                   <div className="mb-4">{renderStars(testimonial.rating)}</div>
 
@@ -245,7 +245,7 @@ const TestimonialsAndFAQ: React.FC = () => {
 
                   {/* Author */}
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-lg">
+                    <div className="w-10 h-10 rounded-full bg-linear-to-br from-orange-400 to-orange-600 flex items-center justify-center text-lg">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -271,7 +271,7 @@ const TestimonialsAndFAQ: React.FC = () => {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left side */}
-            <motion.div variants={itemVariants}>
+            <motion.div variants={itemVariants as Variants}>
               <div className="mb-4">
                 <span className="inline-block px-4 py-1 bg-slate-800/50 border border-purple-500/30 rounded-full text-sm text-gray-400">
                   FAQ
@@ -294,11 +294,11 @@ const TestimonialsAndFAQ: React.FC = () => {
             </motion.div>
 
             {/* Right side - FAQ Items */}
-            <motion.div className="space-y-4" variants={containerVariants}>
+            <motion.div className="space-y-4" variants={containerVariants as Variants}>
               {faqItems.map((item) => (
                 <motion.div
                   key={item.id}
-                  variants={faqItemVariants}
+                  variants={faqItemVariants as Variants}
                   className="border border-slate-700/50 rounded-lg overflow-hidden"
                 >
                   <motion.button
@@ -323,7 +323,7 @@ const TestimonialsAndFAQ: React.FC = () => {
                   <AnimatePresence>
                     {expandedFAQ === item.id && (
                       <motion.div
-                        variants={expandVariants}
+                        variants={expandVariants as Variants}
                         initial="collapsed"
                         animate="expanded"
                         exit="collapsed"
@@ -351,12 +351,12 @@ const TestimonialsAndFAQ: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="relative rounded-2xl bg-gradient-to-br from-blue-900/30 via-purple-900/20 to-blue-900/10 border border-blue-500/20 p-12 text-center overflow-hidden">
+          <div className="relative rounded-2xl bg-linear-to-br from-blue-900/30 via-purple-900/20 to-blue-900/10 border border-blue-500/20 p-12 text-center overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 left-0 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 right-0 w-40 h-40 bg-purple-600/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
-            <motion.div variants={itemVariants} className="relative z-10">
+            <motion.div variants={itemVariants as Variants} className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 Build and Ship Your Website Faster
               </h2>
@@ -367,12 +367,12 @@ const TestimonialsAndFAQ: React.FC = () => {
               </p>
 
               {/* Social Proof */}
-              <motion.div variants={itemVariants} className="flex items-center justify-center gap-4 mb-8">
+              <motion.div variants={itemVariants as Variants} className="flex items-center justify-center gap-4 mb-8">
                 <div className="flex -space-x-3">
                   {['👨‍💻', '👩‍💼', '👨‍🎨', '👩‍💻'].map((avatar, i) => (
                     <div
                       key={i}
-                      className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center border-2 border-slate-950 text-sm"
+                      className="w-10 h-10 rounded-full bg-linear-to-br from-orange-400 to-orange-600 flex items-center justify-center border-2 border-slate-950 text-sm"
                     >
                       {avatar}
                     </div>

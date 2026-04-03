@@ -18,16 +18,6 @@ const HeroSection: React.FC = () => {
                 }}
             />
 
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="flex items-center gap-2 px-5 py-2 rounded-full border border-[#e8733a]/30 bg-[#e8733a]/10 mb-6 z-10"
-            >
-                <span className="w-2 h-2 rounded-full bg-[#e8733a] animate-pulse"></span>
-                <span className="text-[#e8733a] text-sm font-medium">Beta Version</span>
-            </motion.div>
-
             <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -180,7 +170,7 @@ const StatsSection: React.FC = () => {
                         transition={{ delay: i * 0.12, duration: 0.6 }}
                         className="text-center"
                     >
-                        <h3 className="text-3xl md:text-4xl font-black bg-gradient-to-b from-[#e8733a] to-[#f4a261] bg-clip-text text-transparent">
+                        <h3 className="text-3xl md:text-4xl font-black bg-linear-to-b from-[#e8733a] to-[#f4a261] bg-clip-text text-transparent">
                             {stat.value}
                         </h3>
                         <p className="text-xs text-[#666] mt-2">{stat.label}</p>
@@ -249,7 +239,7 @@ const BentoGrid: React.FC = () => {
                     <p className="text-xs text-[#666] leading-relaxed max-w-xs">
                         Assemble complex app structures with pixel-perfect accuracy. Our drag-and-drop logic maps directly to clean, production-ready code.
                     </p>
-                    <div className="mt-6 flex-1 flex items-center justify-center relative min-h-[200px]">
+                    <div className="mt-6 flex-1 flex items-center justify-center relative min-h-50">
                         <motion.div
                             animate={{ rotate: 360 }}
                             transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
@@ -298,8 +288,8 @@ const BentoGrid: React.FC = () => {
                         whileHover={{ scale: 1.01 }}
                         className="bg-[#111] rounded-2xl border border-[#1a1a1a] p-6 flex items-start gap-4 hover:border-[#e8733a]/30 transition-colors"
                     >
-                        <div className="w-10 h-10 rounded-xl bg-[#e8733a]/10 flex items-center justify-center flex-shrink-0">
-                            <div className="w-5 h-5 rounded bg-gradient-to-br from-[#e8733a] to-[#f4a261]" />
+                        <div className="w-10 h-10 rounded-xl bg-[#e8733a]/10 flex items-center justify-center shrink-0">
+                            <div className="w-5 h-5 rounded bg-linear-to-br from-[#e8733a] to-[#f4a261]" />
                         </div>
                         <div>
                             <h3 className="text-base font-bold mb-1.5">TON Components</h3>
@@ -346,7 +336,7 @@ const BentoGrid: React.FC = () => {
                     whileHover={{ scale: 1.005 }}
                     className="md:col-span-5 bg-[#111] rounded-2xl border border-[#1a1a1a] p-7 flex flex-col sm:flex-row items-center gap-6 hover:border-[#e8733a]/30 transition-colors"
                 >
-                    <div className="flex gap-2 flex-shrink-0">
+                    <div className="flex gap-2 shrink-0">
                         {[
                             { bg: 'bg-[#3b82f6]/10', border: 'border-[#3b82f6]/25', icon: '📅' },
                             { bg: 'bg-[#e8733a]/10', border: 'border-[#e8733a]/25', icon: '💬' },
@@ -412,7 +402,7 @@ const HowItWorks: React.FC = () => {
                         <h3 className="text-lg font-bold mt-2 mb-2">{step.title}</h3>
                         <p className="text-xs text-[#666] leading-relaxed">{step.desc}</p>
                         {i < 2 && (
-                            <div className="hidden md:block absolute top-8 -right-4 w-8 h-px bg-gradient-to-r from-[#e8733a]/40 to-transparent" />
+                            <div className="hidden md:block absolute top-8 -right-4 w-8 h-px bg-linear-to-r from-[#e8733a]/40 to-transparent" />
                         )}
                     </motion.div>
                 ))}
@@ -447,7 +437,7 @@ const CTASection: React.FC = () => {
                     href={import.meta.env.VITE_CONTROL_PANEL_URL || "/"}
                     whileHover={{ scale: 1.05, boxShadow: '0 0 40px rgba(232,115,58,0.4)' }}
                     whileTap={{ scale: 0.97 }}
-                    className="px-10 py-4 bg-gradient-to-r from-[#e8733a] to-[#c45e2a] rounded-full text-white font-semibold text-base cursor-pointer border-none inline-flex items-center gap-2 no-underline"
+                    className="px-10 py-4 bg-linear-to-r from-[#e8733a] to-[#c45e2a] rounded-full text-white font-semibold text-base cursor-pointer border-none inline-flex items-center gap-2 no-underline"
                 >
                     Get Started Free <span className="text-lg">→</span>
                 </motion.a>
@@ -459,7 +449,7 @@ const CTASection: React.FC = () => {
 // ==================== HOME ====================
 const Home: React.FC = () => {
     return (
-        <div className="bg-[#0a0a0a] min-h-screen text-white font-['Inter',sans-serif] overflow-x-hidden">
+        <div className="min-h-screen text-white font-['Inter',sans-serif] overflow-x-hidden">
             <HeroSection />
             <DashboardPreview />
             <LogoStrip />
